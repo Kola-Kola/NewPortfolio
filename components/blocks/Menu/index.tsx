@@ -4,8 +4,8 @@ import { Props } from './types'
 const Menu = ({ styleContainer, styleLink, configs }: Props) => {
   return (
     <UnorderedList style={styleContainer || {}}>
-      { configs.map(item => (
-        <List>
+      { configs.map((item, i: number) => (
+        <List key={`${item.label}__${i}`}>
           <Link
             style={styleLink}
             href={item.path}
