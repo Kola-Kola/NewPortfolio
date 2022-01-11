@@ -11,6 +11,7 @@ interface OwnProps {
   styleLink?: {
     fontSize: string
   }
+  openInNewWindow?: boolean
 }
 
 export type Props = OwnProps

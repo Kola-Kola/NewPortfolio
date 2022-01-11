@@ -1,7 +1,13 @@
 import { UnorderedList, List, Link } from './styles'
 import { Props } from './types'
 
-const Menu = ({ styleContainer, styleLink, configs }: Props) => {
+const Menu = ({
+  styleContainer,
+  styleLink,
+  configs,
+  openInNewWindow
+}: Props) => {
+  console.log('openInNewWindow : ', openInNewWindow)
   return (
     <UnorderedList style={styleContainer || {}}>
       { configs.map((item, i: number) => (
@@ -9,7 +15,7 @@ const Menu = ({ styleContainer, styleLink, configs }: Props) => {
           <Link
             style={styleLink}
             href={item.path}
-            target="_blank"
+            target={openInNewWindow ? '_blank' : '_self'}
           >
             {item.label}
           </Link>

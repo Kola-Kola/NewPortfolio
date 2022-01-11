@@ -1,3 +1,4 @@
+import * as React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Heading from '../components/blocks/Heading'
@@ -27,7 +28,7 @@ const SocialContainer = styled.div`
 `
 
 const NavMenuConfigs = [
-  { path: '#', label: 'Blog (Work In Progress)' },
+  { path: '/blog', label: 'Blog (Work In Progress)' },
   { path: '#', label: 'Contact' }
 ]
 
@@ -40,7 +41,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Portfolio</title>
+        <title>Jonathan IBOR | Portfolio</title>
         <meta name="description" content="Jonathan IBOR | Développeur front-end | Expert React.js" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
         <ContentContainer>
           <div>
             <Heading
-              title=" Hello ✋🏼"
+              title="Hello ✋🏼"
               size="large"
             />
             <Heading
@@ -76,6 +77,7 @@ const Home: NextPage = () => {
               configs={SocialMenuConfigs}
               styleContainer={{ padding: 0 }}
               styleLink={{ fontSize: '30px' }}
+              openInNewWindow={true}
             />
           </SocialContainer>
         </ContentContainer>
