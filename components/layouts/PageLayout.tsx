@@ -10,11 +10,12 @@ import styled from "styled-components";
 const NavContainer = styled.section`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 const PageLayout = (props: any) => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Jonathan IBOR | ${props.page ?? ''}</title>
         <meta name="description" content="Jonathan IBOR | Développeur front-end | Expert React.js" />
@@ -35,7 +36,7 @@ const PageLayout = (props: any) => {
         </nav>
       </NavContainer>
       { props.children }
-    </div>
+    </>
   )
 }
 
