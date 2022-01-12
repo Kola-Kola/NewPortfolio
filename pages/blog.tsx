@@ -1,29 +1,38 @@
 import * as React from "react";
 import Head from "next/head";
-import Link from 'next/link'
 import {createClient} from "contentful";
-import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import Post from '../components/blocks/Posts';
 import styles from "../styles/Home.module.css";
 import Heading from "../components/blocks/Heading";
 import styled from "styled-components";
+import Menu from "../components/blocks/Menu";
+import Link from "next/link";
 
-const WelcomeContainer = styled.section`
+const NavContainer = styled.section`
   display: flex;
-  flex-flow: column wrap;
+  justify-content: space-between;
   align-items: center;
-  height: 52px;
-  cursor: pointer;
 `
 
 const PostsContainer = styled.section`
   display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 50px;
+`
+
+const PostsRowContainer = styled.div`
+  display: flex;
   flex-flow: row wrap;
   margin-top: 50px;
+`
+
+const MiddleUnderlineText = styled.div`
+  width: 80px;
+  height: 2px;
+  border-radius: 5px;
+  background: #d5c5c8;
+  margin-top: 5px;
 `
 
 export const getStaticProps = async () => {
@@ -41,6 +50,11 @@ export const getStaticProps = async () => {
   }
 };
 
+const NavMenuConfigs = [
+  { path: '/blog/articles', label: 'Articles' },
+  { path: '/contact', label: 'Contact' }
+]
+
 const Blog = ({ posts }: any) => {
   return (
     <div className={styles.container}>
@@ -55,51 +69,26 @@ const Blog = ({ posts }: any) => {
       </Head>
 
       <main>
-        <WelcomeContainer>
-          <Link href="/blog">
-            <div>
-              <Heading title="Bienvenue dans le labs ✋🏼" size="medium" />
-              <Heading title="Blog technique de ce qui me passionne au quotidien" size="small" />
-            </div>
-          </Link>
-        </WelcomeContainer>
-        <PostsContainer>
-          { posts.map((item: any, i: number) => (
-            <Link href={`/blog/${item.fields.slug}`}>
-              <Paper
-                elevation={8}
-                square
-                sx={{ background: '#11151c', marginRight: '15px' }}
-                onClick={() => console.log('click')}
-              >
-                <Card
-                  key={i}
-                  sx={{
-                    maxWidth: 345,
-                    background: '#11151c',
-                    height: '100%'
-                  }}
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={item.fields.cover.fields.file.url}
-                      alt="green iguana"
-                    />
-                    <CardContent sx={{ color: 'white' }}>
-                      <Typography gutterBottom variant="h5" component="div">
-                        { item.fields.title }
-                      </Typography>
-                      <Typography variant="body2" color="white">
-                        { item.fields.shortDescription }
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Paper>
+        <NavContainer>
+          <div style={{ cursor: 'pointer' }}>
+            <Link href="/">
+              <a>
+                <Heading title="💻 Jonathan IBOR | Accueil" size="medium" />
+              </a>
             </Link>
-          )) }
+          </div>
+          <nav>
+            <Menu configs={NavMenuConfigs} />
+          </nav>
+        </NavContainer>
+        <PostsContainer>
+          <div style={{ display: 'flex', flexFlow: 'column', alignItems: 'center' }}>
+            <Heading title="Les derniers articles" size="medium" />
+            <MiddleUnderlineText />
+          </div>
+          <PostsRowContainer>
+            { posts.map((item: any, i: number) => i <= 3 ? <Post key={i} item={item.fields} i={i}/> : null)}
+          </PostsRowContainer>
         </PostsContainer>
       </main>
     </div>

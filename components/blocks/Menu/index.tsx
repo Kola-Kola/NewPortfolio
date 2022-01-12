@@ -7,7 +7,6 @@ const Menu = ({
   configs,
   openInNewWindow
 }: Props) => {
-  console.log('openInNewWindow : ', openInNewWindow)
   return (
     <UnorderedList style={styleContainer || {}}>
       { configs.map((item, i: number) => (
