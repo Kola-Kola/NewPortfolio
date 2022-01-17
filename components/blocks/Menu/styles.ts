@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 export const UnorderedList = styled.ul`
   display: flex;
@@ -13,5 +13,5 @@ export const List = styled.li`
 export const Link = styled.a`
   position: relative;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: lighter;
 `

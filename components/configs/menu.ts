@@ -1,7 +1,7 @@
 export const Menu = [
   {
-    path: '/blog',
-    label: 'Blog (Work In Progress)'
+    path: '/articles',
+    label: 'Articles'
   },
   {
     path: '/contact',

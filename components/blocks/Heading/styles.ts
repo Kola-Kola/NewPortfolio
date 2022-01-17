@@ -13,10 +13,10 @@ export const TitleLarge = styled.h1`
 
 export const TitleSmall = styled.h2`
   font-size: 16px;
-  font-weight: bold;
+  font-weight: lighter;
 `
 
 export const TitleMedium = styled.h3`
   font-size: 25px;
-  font-weight: bold;
+  font-weight: lighter;
 `

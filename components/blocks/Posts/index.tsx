@@ -1,47 +1,35 @@
-import Paper from "@mui/material/Paper";
-import Card from "@mui/material/Card";
-import { CardActionArea } from "@mui/material";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import Link from "next/link";
+import { format } from 'date-fns'
+import styled from 'styled-components'
+import ArticleIcon from '@mui/icons-material/Article';
 import * as React from "react";
 
-const Post = ({item, i}: any) => {
+const PostContainer = styled.a`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+`
+
+const InformationsContainer = styled.p`
+  display: flex;
+  align-items: center;
+`
+
+const Post = ({item}: any) => {
   return (
-    <Link href={`/blog/articles/${item.slug}`}>
-      <Paper
-        elevation={8}
-        square
-        sx={{ background: '#11151c', marginRight: '30px' }}
-        onClick={() => console.log('click')}
-      >
-        <Card
-          key={i}
-          sx={{
-            maxWidth: 345,
-            background: '#11151c',
-            height: '100%'
-          }}
-        >
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={item.cover?.fields?.file?.url}
-              alt="green iguana"
-            />
-            <CardContent sx={{ color: 'white' }}>
-              <Typography gutterBottom variant="h5" component="div">
-                { item.title }
-              </Typography>
-              <Typography variant="body2" color="white">
-                { item.shortDescription }
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Paper>
+    <Link href={`/articles/${item.slug}`}>
+      <PostContainer>
+        <InformationsContainer>
+          <span style={{ marginRight: 10 }}>
+            <ArticleIcon />
+          </span>
+          <span style={{ marginRight: 5 }}>
+            { item.title } |
+          </span>
+          <span style={{ fontSize: 12 }}>publié le : {format(new Date(item.createdAt), 'dd-MM-yyyy')}</span>
+        </InformationsContainer>
+      </PostContainer>
     </Link>
   )
 }
