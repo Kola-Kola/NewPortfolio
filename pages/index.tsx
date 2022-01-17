@@ -78,9 +78,9 @@ const Blog = ({posts}: any) => {
             fontSize="small"/></a>.
           </TextContainer>
           <TextContainer>
-            Sur cette page, vous trouverez des informations a propos de moi ainsi que des articles de blogs que j'ai
+            Sur cette page, vous trouverez des informations a propos de moi ainsi que des articles de blogs que j&apos;ai
             écris.
-            Tout les articles publiés sur ce blog sont des sujets du moment qui m'intéresse comme des sujets de
+            Tout les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse comme des sujets de
             développement informatique comme JavaScript ou NodeJS.
           </TextContainer>
           <TextContainer>
@@ -89,7 +89,7 @@ const Blog = ({posts}: any) => {
               <List>Diplômé de <a href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
                 digitales)</List>
               <List>Passionné de développement front-end</List>
-              <List>J'aime pratiquer le fitness </List>
+              <List>J&apos;aime pratiquer le fitness </List>
               <List>Curieux à propos de la caféologie</List>
               <List>Actuellement développeur React chez <a href="https://bliink.io">BLIINK</a> </List>
             </ul>
