@@ -21,7 +21,9 @@ const PostsRowContainer = styled.div`
 export const getStaticProps = async () => {
   if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
     return {
-      props: {}
+      props: {
+        posts: []
+      }
     }
   }
 

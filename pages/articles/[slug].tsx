@@ -29,7 +29,9 @@ export const getStaticProps = async ({ params }: any) => {
 
   if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
     return {
-      props: {}
+      props: {
+        post: {}
+      }
     }
   }
 
