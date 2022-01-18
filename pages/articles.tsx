@@ -19,6 +19,10 @@ const PostsRowContainer = styled.div`
 `
 
 export const getStaticProps = async () => {
+  if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
+    return {}
+  }
+
   const client = createClient({
     space: process.env.SPACE_ID_CONTENTFUL || '',
     accessToken: process.env.TOKEN_CONTENTFUL || '',
