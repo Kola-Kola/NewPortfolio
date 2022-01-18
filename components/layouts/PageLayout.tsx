@@ -16,7 +16,7 @@ const PageLayout = (props: any) => {
   return (
     <>
       <Head>
-        <title>Jonathan IBOR | ${props.page ?? ''}</title>
+        <title>Jonathan IBOR | {props.page ?? ''}</title>
         <meta name="description" content="Jonathan IBOR | Développeur front-end | Expert React.js" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -26,7 +26,7 @@ const PageLayout = (props: any) => {
         <div style={{ cursor: 'pointer' }}>
           <Link href="/">
             <a>
-              <Heading title="💻 Jonathan IBOR | Accueil" size="medium" />
+              <Heading title="Jonathan IBOR | Accueil" size="medium" />
             </a>
           </Link>
         </div>

@@ -19,17 +19,19 @@ const InformationsContainer = styled.p`
 const Post = ({item}: any) => {
   return (
     <Link href={`/articles/${item.slug}`}>
-      <PostContainer>
-        <InformationsContainer>
+      <a>
+        <PostContainer>
+          <InformationsContainer>
           <span style={{ marginRight: 10 }}>
             <ArticleIcon />
           </span>
-          <span style={{ marginRight: 5 }}>
+            <span style={{ marginRight: 5 }}>
             { item.title } |
           </span>
-          <span style={{ fontSize: 12 }}>publié le : {format(new Date(item.createdAt), 'dd-MM-yyyy')}</span>
-        </InformationsContainer>
-      </PostContainer>
+            <span style={{ fontSize: 12 }}>publié le : {format(new Date(item.createdAt), 'dd-MM-yyyy')}</span>
+          </InformationsContainer>
+        </PostContainer>
+      </a>
     </Link>
   )
 }

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import {BLOCKS} from "@contentful/rich-text-types";
-import Image from 'next/image'
 import MiddleUnderlineText from "../../styles/middleUnderlineText";
 import style from "../../pages/articles/slug.module.css";
 
@@ -25,7 +24,9 @@ const richTextConfig = {
       </h3>
     ),
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => (
-      <Image alt="asset" className={style.image} src={`https:${node.data.target.fields.file.url}`}/>
+      <div style={{ position: 'relative', minHeight: '300px' }}>
+        <img alt="asset" className={style.image} src={`https:${node.data.target.fields.file.url}`}/>
+      </div>
     ),
     [BLOCKS.DOCUMENT]: (node: any, children: any) => ((
         <div className={style.container}>{children}</div>
