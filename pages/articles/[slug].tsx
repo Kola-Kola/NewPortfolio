@@ -27,6 +27,10 @@ export async function getStaticPaths() {
 export const getStaticProps = async ({ params }: any) => {
   const { slug } = params
 
+  if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
+    return null
+  }
+
   const client = createClient({
     space: process.env.SPACE_ID_CONTENTFUL || '',
     accessToken: process.env.TOKEN_CONTENTFUL || '',
