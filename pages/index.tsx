@@ -49,7 +49,7 @@ const List = styled.li`
 
 export const getStaticProps = async () => {
   if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
-    return null
+    return {}
   }
 
   const client = createClient({
