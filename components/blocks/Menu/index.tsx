@@ -1,27 +1,30 @@
-import { UnorderedList, List, Link } from './styles'
-import { Props } from './types'
+import {Link as LinkStyle, List, UnorderedList} from './styles'
+import Link from 'next/link'
+import {Props} from './types'
 
 const Menu = ({
   styleContainer,
   styleLink,
   configs,
-  openInNewWindow
 }: Props) => {
   return (
     <UnorderedList style={styleContainer || {}}>
       { configs.map((item, i: number) => (
         <List key={`${item.label}__${i}`}>
           <Link
-            style={styleLink}
-            href={item.path}
-            target={openInNewWindow ? '_blank' : '_self'}
+              href={item.path}
+              shallow={false}
           >
-            {item.label}
+              <LinkStyle
+                  style={styleLink}
+              >
+                  {item.label}
+              </LinkStyle>
           </Link>
         </List>
       )) }
     </UnorderedList>
   )
-}
+};
 
 export default Menu

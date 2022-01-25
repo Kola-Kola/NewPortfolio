@@ -8,26 +8,31 @@ import Heading from "../components/blocks/Heading";
 import styled from "styled-components";
 import PageLayout from "../components/layouts/PageLayout";
 
+const Row = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
+
 const LastPostsContainer = styled.section`
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
   margin: 50px auto;
   max-width: 800px;
-`
+`;
 
 const PostsRowContainer = styled.div`
   display: flex;
   flex-flow: column wrap;
   margin-top: 30px;
-`
+`;
 
 const AboutMeContainer = styled.div`
   display: flex;
   flex-flow: column wrap;
   max-width: 800px;
   margin: 50px auto;
-`
+`;
 
 const MiddleUnderlineText = styled.div`
   width: 80px;
@@ -35,17 +40,17 @@ const MiddleUnderlineText = styled.div`
   border-radius: 5px;
   background: #d5c5c8;
   margin-top: 5px;
-`
+`;
 
 const TextContainer = styled.p`
   margin-top: 30px;
   max-width: 800px;
   line-height: 20px;
-`
+`;
 
 const List = styled.li`
   list-style: circle;
-`
+`;
 
 export const getStaticProps = async () => {
   if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
@@ -59,9 +64,9 @@ export const getStaticProps = async () => {
   const client = createClient({
     space: process.env.SPACE_ID_CONTENTFUL || '',
     accessToken: process.env.TOKEN_CONTENTFUL || '',
-  })
+  });
 
-  const posts = await client.getEntries('blogPost')
+  const posts = await client.getEntries('blogPost');
 
   return {
     props: {
@@ -91,17 +96,29 @@ const Blog = ({posts}: any) => {
             Tout les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse comme des sujets de
             développement informatique comme JavaScript ou NodeJS.
           </TextContainer>
-          <TextContainer>
-            <span>Pour résumer : </span>
-            <ul>
-              <List>Diplômé de <a href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
-                digitales)</List>
-              <List>Passionné de développement front-end</List>
-              <List>J&apos;aime pratiquer le fitness </List>
-              <List>Curieux à propos de la caféologie</List>
-              <List>Actuellement développeur React chez <a href="https://bliink.io">BLIINK</a> </List>
-            </ul>
-          </TextContainer>
+          <Row>
+            <TextContainer style={{width: '50%'}}>
+              <span>Pour résumer : </span>
+              <ul>
+                <List>Diplômé de <a href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
+                  digitales)</List>
+                <List>Passionné de développement front-end</List>
+                <List>J&apos;aime pratiquer le fitness </List>
+                <List>Curieux à propos de la caféologie</List>
+                <List>Actuellement développeur React chez <a href="https://bliink.io">BLIINK</a> </List>
+              </ul>
+            </TextContainer>
+            <TextContainer style={{width: '50%'}}>
+              <span>Technos / Librairies 💪</span>
+              <ul>
+                <List>HTML 5 / CSS3 / SCSS / Styled-Component (CSS in JS)</List>
+                <List>JavaScript / TypeScript</List>
+                <List>React.js / Next.js / Redux / GraphQL / Rest</List>
+                <List>Jest / Enzyme / React-Testing-Library</List>
+                <List>Webpack / EsLint / Gulp / Git / Figma / Photoshop / NPM</List>
+              </ul>
+            </TextContainer>
+          </Row>
         </AboutMeContainer>
         <LastPostsContainer>
           <div style={{display: 'flex', flexFlow: 'column', alignItems: 'center', width: '100%'}}>
@@ -115,6 +132,6 @@ const Blog = ({posts}: any) => {
       </PageLayout>
     </div>
   )
-}
+};
 
 export default Blog
