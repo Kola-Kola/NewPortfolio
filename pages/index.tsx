@@ -125,7 +125,7 @@ const Blog = ({posts}: any) => {
                 <List>HTML 5 / CSS3 / SCSS / Styled-Component (CSS in JS)</List>
                 <List>JavaScript / TypeScript</List>
                 <List>React.js / Next.js / Redux / GraphQL / Rest</List>
-                <List>Jest / Enzyme / React-Testing-Library</List>
+                <List>Jest / Cypress / Enzyme / React-Testing-Library</List>
                 <List>Webpack / EsLint / Gulp / Git / Figma / Photoshop / NPM</List>
               </ul>
             </TextContainerWithWidth>
