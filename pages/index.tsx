@@ -25,6 +25,7 @@ const PostsRowContainer = styled.div`
   display: flex;
   flex-flow: column wrap;
   margin-top: 30px;
+  width: 100%;
 `;
 
 const AboutMeContainer = styled.div`
@@ -47,6 +48,13 @@ const TextContainer = styled.p`
   max-width: 800px;
   line-height: 20px;
 `;
+
+const TextContainerWithWidth = styled(TextContainer)`
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+  width: 50%
+`
 
 const List = styled.li`
   list-style: circle;
@@ -97,7 +105,7 @@ const Blog = ({posts}: any) => {
             développement informatique comme JavaScript ou NodeJS.
           </TextContainer>
           <Row>
-            <TextContainer style={{width: '50%'}}>
+            <TextContainerWithWidth>
               <span>Pour résumer : </span>
               <ul>
                 <List>Diplômé de <a href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
@@ -107,8 +115,8 @@ const Blog = ({posts}: any) => {
                 <List>Curieux à propos de la caféologie</List>
                 <List>Actuellement développeur React chez <a href="https://bliink.io">BLIINK</a> </List>
               </ul>
-            </TextContainer>
-            <TextContainer style={{width: '50%'}}>
+            </TextContainerWithWidth>
+            <TextContainerWithWidth>
               <span>Technos / Librairies 💪</span>
               <ul>
                 <List>HTML 5 / CSS3 / SCSS / Styled-Component (CSS in JS)</List>
@@ -117,7 +125,7 @@ const Blog = ({posts}: any) => {
                 <List>Jest / Enzyme / React-Testing-Library</List>
                 <List>Webpack / EsLint / Gulp / Git / Figma / Photoshop / NPM</List>
               </ul>
-            </TextContainer>
+            </TextContainerWithWidth>
           </Row>
         </AboutMeContainer>
         <LastPostsContainer>
