@@ -98,7 +98,7 @@ const Blog = ({posts}: any) => {
           <TextContainer data-cy="firstTextContainer">
             Je suis développeur front-end, Français, vivant en région parisienne, je travail pour BLIINK
             (Startup AdTech),
-            vous pouvez aussi me trouvez ici : <a data-cy="github" target="_blank" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
+            vous pouvez aussi me trouvez ici : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
             fontSize="small"/></a>.
           </TextContainer>
           <TextContainer data-cy="secondTextContainer">
@@ -111,12 +111,12 @@ const Blog = ({posts}: any) => {
             <TextContainerWithWidth data-cy="firstSkillset">
               <span>Pour résumer : </span>
               <ul>
-                <List>Diplômé de <a target="_blank" href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
+                <List>Diplômé de <a target="_blank" rel="noreferrer" href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
                   digitales)</List>
                 <List>Passionné de développement front-end</List>
                 <List>J&apos;aime pratiquer le fitness </List>
                 <List>Curieux à propos de la caféologie</List>
-                <List>développeur React chez <a target="_blank" href="https://bliink.io">BLIINK</a> </List>
+                <List>développeur React chez <a target="_blank" rel="noreferrer" href="https://bliink.io">BLIINK</a> </List>
               </ul>
             </TextContainerWithWidth>
             <TextContainerWithWidth data-cy="secondSkillset">
