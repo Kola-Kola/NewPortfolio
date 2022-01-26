@@ -49,7 +49,10 @@ const TextContainer = styled.p`
   line-height: 20px;
 `;
 
-const TextContainerWithWidth = styled(TextContainer)`
+const TextContainerWithWidth = styled.div`
+  margin-top: 30px;
+  max-width: 800px;
+  line-height: 20px;
   @media (max-width: 480px) {
     width: 100%;
   }
