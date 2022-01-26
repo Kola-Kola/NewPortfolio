@@ -31,6 +31,20 @@ Start the server
   npx next dev
 ```
 
+## Running Tests
+
+To run linter, run the following command
+
+```bash
+  npm run lint
+```
+
+To run End-To-End testing with Cypress, run this command
+
+```bash
+  npm run cypress:open // Or
+  npm run cypress:run
+```
 
 ## Environment Variables
 
