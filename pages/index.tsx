@@ -98,7 +98,7 @@ const Blog = ({posts}: any) => {
           <TextContainer data-cy="firstTextContainer">
             Je suis développeur front-end, Français, vivant en région parisienne, je travail pour BLIINK
             (Startup AdTech),
-            vous pouvez aussi me trouvez ici : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
+            vous pouvez aussi me trouvez ici : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
             fontSize="small"/></a>.
           </TextContainer>
           <TextContainer data-cy="secondTextContainer">
