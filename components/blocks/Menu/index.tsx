@@ -10,10 +10,13 @@ const Menu = ({
   return (
     <UnorderedList style={styleContainer || {}}>
       { configs.map((item, i: number) => (
-        <List key={`${item.label}__${i}`}>
+        <List
+          key={`${item.label}__${i}`}
+          data-cy={item.label}
+        >
           <Link
-              href={item.path}
-              shallow={false}
+            href={item.path}
+            shallow={false}
           >
               <LinkStyle
                   style={styleLink}

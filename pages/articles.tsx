@@ -48,7 +48,7 @@ const Articles = ({ posts }: any) => {
         <Row>
           <div style={{display: 'flex', flexFlow: 'column', alignItems: 'center', width: '100%'}}>
             <Heading title="Les derniers articles" size="medium"/>
-            <MiddleUnderlineText/>
+            <MiddleUnderlineText data-cy="MiddleUnderlineTextComponent"/>
           </div>
           <PostsRowContainer>
             {posts?.length === 0 ? <div>Coming soon...</div> : posts.map((item: any, i: number) => i <= 3 ? <Post key={i} item={item.fields} i={i}/> : null)}
