@@ -1,12 +1,15 @@
 import * as React from "react";
 import {createClient} from "contentful";
-import Post from '../components/blocks/Posts';
+import dynamic from 'next/dynamic'
 import styles from "../styles/Home.module.css";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Heading from "../components/blocks/Heading";
 import styled from "styled-components";
-import PageLayout from "../components/layouts/PageLayout";
+
+const Post = dynamic(() => import('../components/blocks/Posts'));
+const Heading = dynamic(() => import('../components/blocks/Heading'));
+const PageLayout = dynamic(() => import('../components/layouts/PageLayout'));
+
 
 const Row = styled.div`
   display: flex;

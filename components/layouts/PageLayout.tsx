@@ -1,10 +1,12 @@
 import Head from "next/head";
+import dynamic from 'next/dynamic'
 import * as React from "react";
 import Link from "next/link";
-import Heading from "../blocks/Heading";
-import Menu from "../blocks/Menu";
 import {Menu as ConfigMenu} from "../configs/menu";
 import styled from "styled-components";
+
+const Heading = dynamic(() => import('../blocks/Heading'));
+const Menu = dynamic(() => import('../blocks/Menu'));
 
 const NavContainer = styled.section`
   display: flex;
