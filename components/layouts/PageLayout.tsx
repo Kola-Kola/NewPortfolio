@@ -18,7 +18,7 @@ const PageLayout = (props: any) => {
   return (
     <>
       <Head>
-        <script async id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/fd3dc1f775da2ee6a6b6e2d7/script.js"/>
+        <script defer id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/fd3dc1f775da2ee6a6b6e2d7/script.js"/>
         <title>Jonathan IBOR | {props.page ?? ''}</title>
         <meta name="title" content="Jonathan IBOR | Accueil"/>
         <meta name="description" content="Jonathan IBOR | Développeur front-end | Expert React.js"/>
