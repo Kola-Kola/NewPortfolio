@@ -30,4 +30,4 @@ jobs:
     - name: Run test E2E
       run: |
         npm install
-        npm run cypress:run
+        npx cypress run
