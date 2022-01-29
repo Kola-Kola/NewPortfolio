@@ -28,7 +28,6 @@ const Row20 = styled.div`
 const Post = ({item}: any) => {
   return (
     <a href={`/articles/${item.slug}`}>
-      <a>
         <PostContainer>
           <InformationsContainer>
             <Row80>
@@ -44,7 +43,6 @@ const Post = ({item}: any) => {
             </Row20>
           </InformationsContainer>
         </PostContainer>
-      </a>
     </a>
   )
 }
