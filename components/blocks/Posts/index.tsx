@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { format } from 'date-fns'
 import styled from 'styled-components'
 import ArticleIcon from '@mui/icons-material/Article';
 import * as React from "react";
 
-const PostContainer = styled.a`
+const PostContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -27,23 +28,23 @@ const Row20 = styled.div`
 
 const Post = ({item}: any) => {
   return (
-    <a href={`/articles/${item.slug}`}>
-        <PostContainer>
-          <InformationsContainer>
-            <Row80>
-              <span style={{ marginRight: 10 }}>
-                <ArticleIcon />
-              </span>
-              <span style={{ marginRight: 5 }}>
-                { item.title }
-              </span>
-            </Row80>
-            <Row20>
-              <span style={{ fontSize: 12 }}>publié le : {format(new Date(item.createdAt), 'dd-MM-yyyy')}</span>
-            </Row20>
-          </InformationsContainer>
-        </PostContainer>
-    </a>
+    <Link href={`/articles/${item.slug}`} passHref={true}>
+      <PostContainer>
+        <InformationsContainer>
+          <Row80>
+            <span style={{ marginRight: 10 }}>
+              <ArticleIcon />
+            </span>
+            <span style={{ marginRight: 5 }}>
+              { item.title }
+            </span>
+          </Row80>
+          <Row20>
+            <span style={{ fontSize: 12 }}>publié le : {format(new Date(item.createdAt), 'dd-MM-yyyy')}</span>
+          </Row20>
+        </InformationsContainer>
+      </PostContainer>
+    </Link>
   )
 }
 
