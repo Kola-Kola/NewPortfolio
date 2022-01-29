@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { format } from 'date-fns'
 import styled from 'styled-components'
 import ArticleIcon from '@mui/icons-material/Article';
@@ -28,7 +27,7 @@ const Row20 = styled.div`
 
 const Post = ({item}: any) => {
   return (
-    <Link href={`/articles/${item.slug}`} passHref={true}>
+    <a href={`/articles/${item.slug}`}>
       <a>
         <PostContainer>
           <InformationsContainer>
@@ -46,7 +45,7 @@ const Post = ({item}: any) => {
           </InformationsContainer>
         </PostContainer>
       </a>
-    </Link>
+    </a>
   )
 }
 
