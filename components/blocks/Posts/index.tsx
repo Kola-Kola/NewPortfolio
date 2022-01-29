@@ -28,7 +28,7 @@ const Row20 = styled.div`
 
 const Post = ({item}: any) => {
   return (
-    <Link href={`/articles/${item.slug}`}>
+    <Link href={`/articles/${item.slug}`} passHref={true}>
       <a>
         <PostContainer>
           <InformationsContainer>
