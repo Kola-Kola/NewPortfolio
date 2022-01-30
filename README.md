@@ -1,6 +1,8 @@
 
 # Personal Portfolio and Blog
 
+[![CI](https://github.com/Kola-Kola/Portfolio-Blog/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/Kola-Kola/Portfolio-Blog/actions/workflows/node.js.yml)
+
 A space to introduce myself as well as a dedicated space for content sharing
 [Go to website](https://portfolio-psi-steel-88.vercel.app/)
 
