@@ -105,13 +105,13 @@ const Blog = ({posts}: any) => {
           </TextContainer>
           <TextContainer data-cy="secondTextContainer">
             Vous trouverez des informations à propos de moi ainsi que des articles de blogs.
-            Tous les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse.
+            Tous les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéressent.
           </TextContainer>
           <Row>
             <TextContainerWithWidth data-cy="firstSkillset">
               <span>Pour résumer : </span>
               <ul>
-                <List>Diplômé de <a target="_blank" rel="noreferrer" href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
+                <List>Diplômé de <a target="_blank" rel="noreferrer" href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solutions
                   digitales)</List>
                 <List>développeur React chez <a target="_blank" rel="noreferrer" href="https://bliink.io">BLIINK</a> </List>
                 <List>Passionné de développement front-end</List>
