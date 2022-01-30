@@ -1,6 +1,9 @@
 describe('Menu', () => {
   beforeEach(() => {
-    cy.visit(process.env.CYPRESS_URL || '')
+    cy.visit(process.env.CYPRESS_URL || '', {
+      headers: {
+        "Accept-Encoding": "gzip, deflate, br"
+      }})
   })
 
   it ('Should have About me title with MiddleUnderLine component', () => {
