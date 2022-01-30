@@ -99,15 +99,14 @@ const Blog = ({posts}: any) => {
             <MiddleUnderlineText data-cy="MiddleUnderlineText"/>
           </div>
           <TextContainer data-cy="firstTextContainer">
-            Je suis développeur front-end, Français, vivant en région parisienne, je travail pour BLIINK
-            (Startup AdTech),
-            vous pouvez aussi me trouvez ici : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
+            Développeur front-end, Français, vivant en région parisienne, en contrat avec BLIINK (Startup AdTech),
+            vous pouvez aussi me trouver ici : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
             fontSize="small"/></a>.
           </TextContainer>
           <TextContainer data-cy="secondTextContainer">
-            Sur cette page, vous trouverez des informations a propos de moi ainsi que des articles de blogs que j&apos;ai
-            écris.
-            Tout les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse comme des sujets de
+            Sur cette page, vous trouverez des informations à propos de moi ainsi que des articles de blogs que j&apos;ai
+            écrit.
+            Tous les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse comme des sujets de
             développement informatique comme JavaScript ou NodeJS.
           </TextContainer>
           <Row>
@@ -116,10 +115,10 @@ const Blog = ({posts}: any) => {
               <ul>
                 <List>Diplômé de <a target="_blank" rel="noreferrer" href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
                   digitales)</List>
-                <List>Passionné de développement front-end</List>
-                <List>J&apos;aime pratiquer le fitness </List>
-                <List>Curieux à propos de la caféologie</List>
                 <List>développeur React chez <a target="_blank" rel="noreferrer" href="https://bliink.io">BLIINK</a> </List>
+                <List>Passionné de développement front-end</List>
+                <List>Aime pratiquer le fitness </List>
+                <List>Curieux à propos de la caféologie</List>
               </ul>
             </TextContainerWithWidth>
             <TextContainerWithWidth data-cy="secondSkillset">
