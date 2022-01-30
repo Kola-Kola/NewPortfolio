@@ -1,6 +1,6 @@
 describe('Menu', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy.visit(process.env.CYPRESS_URL || '')
   })
 
   it ('Should have About me title with MiddleUnderLine component', () => {
