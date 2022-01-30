@@ -100,14 +100,12 @@ const Blog = ({posts}: any) => {
           </div>
           <TextContainer data-cy="firstTextContainer">
             Développeur front-end, Français, vivant en région parisienne, en contrat avec BLIINK (Startup AdTech).
-            Vous pouvez me trouver : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
+            Vous pouvez me trouver sur : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
             fontSize="small"/></a>.
           </TextContainer>
           <TextContainer data-cy="secondTextContainer">
-            Sur cette page, vous trouverez des informations à propos de moi ainsi que des articles de blogs que j&apos;ai
-            écrit.
-            Tous les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse comme des sujets de
-            développement informatique comme JavaScript ou NodeJS.
+            Vous trouverez des informations à propos de moi ainsi que des articles de blogs.
+            Tous les articles publiés sur ce blog sont des sujets du moment qui m&apos;intéresse.
           </TextContainer>
           <Row>
             <TextContainerWithWidth data-cy="firstSkillset">
