@@ -99,8 +99,8 @@ const Blog = ({posts}: any) => {
             <MiddleUnderlineText data-cy="MiddleUnderlineText"/>
           </div>
           <TextContainer data-cy="firstTextContainer">
-            Développeur front-end, Français, vivant en région parisienne, en contrat avec BLIINK (Startup AdTech),
-            vous pouvez aussi me trouver ici : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
+            Développeur front-end, Français, vivant en région parisienne, en contrat avec BLIINK (Startup AdTech).
+            Vous pouvez me trouver : <a data-cy="github" target="_blank" rel="noreferrer" href="https://github.com/Kola-Kola"><GitHubIcon fontSize="small"/></a>, <a data-cy="linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathan-ibor-ab4607127/"><LinkedInIcon
             fontSize="small"/></a>.
           </TextContainer>
           <TextContainer data-cy="secondTextContainer">
