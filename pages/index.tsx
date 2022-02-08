@@ -10,7 +10,8 @@ import PageLayout from "../components/layouts/PageLayout";
 
 const Row = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
+  align-items: baseline;
 `;
 
 const LastPostsContainer = styled.section`
@@ -43,14 +44,36 @@ const MiddleUnderlineText = styled.div`
 `;
 
 const TextContainer = styled.p`
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
   margin-top: 30px;
   max-width: 800px;
   line-height: 20px;
 `;
 
+const TextContainerWithWidth = styled(TextContainer)`
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  width: 50%;
+`;
+
 const List = styled.li`
   list-style: circle;
+  font-size: 16px;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
 `;
+
+const TitleUnordoredList = styled.span`
+  font-size: 16px;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+`;
+
 
 export const getStaticProps = async () => {
   if (!process.env.SPACE_ID_CONTENTFUL && !process.env.TOKEN_CONTENTFUL) {
@@ -97,19 +120,20 @@ const Blog = ({posts}: any) => {
             développement informatique comme JavaScript ou NodeJS.
           </TextContainer>
           <Row>
-            <TextContainer style={{width: '50%'}}>
-              <span>Pour résumer : </span>
+            <TextContainerWithWidth>
+              <TitleUnordoredList>Pour résumer : </TitleUnordoredList>
               <ul>
-                <List>Diplômé de <a href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur développeur de solution
+                <List>Diplômé de <a target="_blank" href="https://www.hetic.net/">HETIC</a> en 2019 (Concepteur
+                  développeur de solution
                   digitales)</List>
                 <List>Passionné de développement front-end</List>
                 <List>J&apos;aime pratiquer le fitness </List>
                 <List>Curieux à propos de la caféologie</List>
                 <List>Actuellement développeur React chez <a href="https://bliink.io">BLIINK</a> </List>
               </ul>
-            </TextContainer>
-            <TextContainer style={{width: '50%'}}>
-              <span>Technos / Librairies 💪</span>
+            </TextContainerWithWidth>
+            <TextContainerWithWidth>
+              <TitleUnordoredList>Technos / Librairies 💪</TitleUnordoredList>
               <ul>
                 <List>HTML 5 / CSS3 / SCSS / Styled-Component (CSS in JS)</List>
                 <List>JavaScript / TypeScript</List>
@@ -117,7 +141,7 @@ const Blog = ({posts}: any) => {
                 <List>Jest / Enzyme / React-Testing-Library</List>
                 <List>Webpack / EsLint / Gulp / Git / Figma / Photoshop / NPM</List>
               </ul>
-            </TextContainer>
+            </TextContainerWithWidth>
           </Row>
         </AboutMeContainer>
         <LastPostsContainer>
