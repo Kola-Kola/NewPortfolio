@@ -6,7 +6,7 @@ const Sitemap = () => {
 export const getServerSideProps = ({res}) => {
     const baseUrl = {
         development: "http://localhost:3000",
-        production: "https://jonathanibor.dev",
+        production: "https://jonathanibor.dev/",
     }[process.env.NODE_ENV];
 
     const staticPages = fs
@@ -20,7 +20,7 @@ export const getServerSideProps = ({res}) => {
             ].includes(staticPage);
         })
         .map((staticPagePath) => {
-            return `${baseUrl}/${staticPagePath.split('')}`;
+            return `${baseUrl}/${staticPagePath.split('.')[0]}`;
         });
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
