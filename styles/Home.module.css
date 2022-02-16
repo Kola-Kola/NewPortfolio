@@ -11,6 +11,9 @@
 }
 
 .container {
+  display: block;
+  overflow: auto;
+  height: 100%;
   background: #11151c;
   padding: 20px;
 }

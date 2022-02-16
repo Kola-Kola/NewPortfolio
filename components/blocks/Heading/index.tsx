@@ -20,11 +20,11 @@ const Title = (value: string, size: string, styles?: IStyles) => {
   const title = titleSize.find(item => item.value === size)
 
   if (title && !styles) {
-    return <title.component>{value}</title.component>
+    return <title.component data-cy={value}>{value}</title.component>
   }
 
   if (title && styles) {
-    return <title.component style={styles}>{value}</title.component>
+    return <title.component data-cy={value} style={styles}>{value}</title.component>
   }
 
   return null
